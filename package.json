@@ -1,0 +1,14 @@
+{
+  "name": "brandon-website",
+  "version": "1.0.0",
+  "description": "Brandon's website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "brandon"
+  ],
+  "author": "Brandon Baris",
+  "license": "ISC"
+}
