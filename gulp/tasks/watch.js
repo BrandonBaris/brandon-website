@@ -24,13 +24,10 @@
 //   }, ['styles']);
 // });
 var gulp        = require("gulp");
-var browserSync = require("browser-sync");
 
-// Static Server + watching scss/html files
-module.exports = gulp.task('watch', ['styles'], function() {
-
+// WATCHES FILES FOR CHANGES AND RERUNS GULP TASK ASSIGNED TO THEM
+module.exports = gulp.task('watch', function() {
     gulp.watch(config.paths.src.scripts, ['lint']);
     gulp.watch(config.paths.src.index, ['index']);
     gulp.watch(config.paths.src.styles, ['styles']);
-    gulp.watch(config.paths.src.index).on('change', browserSync.reload);
 });

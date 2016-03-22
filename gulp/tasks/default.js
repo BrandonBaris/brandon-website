@@ -12,7 +12,7 @@ module.exports = gulp.task('default', function() {
     );
   } else {
     runSequence( 
-      ['index', 'styles', 'images', 'assets', 'lint'], ['watchify','watch','serve']
+      ['index', 'styles', 'images', 'assets', 'lint'], ['watchify','watch','browser-sync']
     );
   }
 });
