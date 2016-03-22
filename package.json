@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.5.0",
-    "mithril": "^0.2.2-rc.1"
+    "mithril": "^0.2.3"
   },
   "devDependencies": {
     "babel-eslint": "^5.0.0",
@@ -56,7 +56,7 @@
     "url": "https://github.com/BrandonBaris/brandon-website/issues"
   },
   "browser": {
-    "mithril": "./bower_components/mithril/mithril.min.js"
+    "mithril": "./node_modules/mithril/mithril.min.js"
   },
   "browserify-shim": {},
   "homepage": "https://github.com/BrandonBaris/brandon-website#readme"
