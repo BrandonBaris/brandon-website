@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack && npm run dev",
     "dev": "webpack-dev-server",
-    "release": "webpack --config webpack.prod.js --optimize-minimize"
+    "release": "webpack --config webpack.prod.js --optimize-minimize",
+    "test": "ospec"
   },
   "keywords": [
     "brandon"
