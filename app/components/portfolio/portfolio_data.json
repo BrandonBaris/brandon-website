@@ -2,20 +2,39 @@
 	"data": [
 		{
 			"id": 1,
-			"project_name": "STUFF",
+			"project_name": "Sed ea",
 			"start_date": 1509167255,
-			"end_data": 1509167255,
-			"description": "Yada",
-			"tasks": [],
-			"uri": {},
-			"thumbnail": {},
-			"imgs": [{}]
+			"end_date": 1509167255,
+			"description": "Eu consectetur labore dolor excepteur fugiat in quis eiusmod laboris fugiat velit reprehenderit do id in eu cillum nisi est amet in anim amet minim sit ut aliquip enim minim mollit in pariatur labore id cillum aute reprehenderit do dolor nisi cupidatat amet et ad culpa voluptate magna proident in deserunt incididunt proident amet pariatur incididunt elit excepteur reprehenderit labore in nisi consequat in ex pariatur aliquip reprehenderit nulla consequat deserunt anim non nulla est voluptate exercitation anim mollit veniam ea exercitation dolore sunt nulla velit sunt eu ut nisi qui fugiat ad ut do magna exercitation dolore ea labore ad dolore eu cupidatat incididunt occaecat duis proident in dolor ea dolor exercitation cupidatat est eu minim proident commodo ut velit ea incididunt incididunt officia minim veniam voluptate eu quis sed consequat deserunt velit qui commodo labore ut magna aliqua sit aliqua aliquip cillum id in esse eiusmod dolore id dolor consectetur consequat voluptate nulla irure deserunt velit nulla in sunt laboris dolore id pariatur mollit esse fugiat ut et proident qui ullamco voluptate quis mollit est dolor sed officia ad in in.",
+			"tasks": [
+				"Officia do nostrud aliquip incididunt commodo proident sed laborum.",
+				"Lorem ipsum ex incididunt officia cupidatat aute dolore culpa mollit fugiat voluptate reprehenderit non ut exercitation ut magna aliquip qui cillum.",
+				"Non aliquip enim ut amet deserunt labore dolor ut consectetur tempor officia dolore."
+			],
+			"uri": {
+				"value": "https://blehbleh.com",
+				"description": "Dolore esse mollit non fugiat officia sint id deserunt ex enim in nostrud anim incididunt esse amet commodo eiusmod culpa anim dolore adipisicing tempor labore do esse."
+			},
+			"thumbnail": {
+				"value": "http://via.placeholder.com/150x100",
+				"description": "Ullamco esse mollit."
+			},
+			"imgs": [
+				{
+					"value": "http://via.placeholder.com/450x300",
+					"description": "Laborum cupidatat et non consectetur anim ullamco culpa sed laboris ea ullamco nisi dolor labore id et fugiat aliqua do aute sunt sunt ex irure proident non."
+				},
+				{
+					"value": "http://via.placeholder.com/450x300",
+					"description": "Officia quis cillum mollit sit non ut nisi reprehenderit eiusmod dolor do proident sunt nostrud minim elit do qui voluptate sed esse veniam enim sint do est ut."
+				}
+			]
 		},
 		{
 			"id": 2,
-			"project_name": "STUFF2",
+			"project_name": "Amet irure2",
 			"start_date": 1509167255,
-			"end_data": 1509167255,
+			"end_date": 1509167255,
 			"description": "lorem",
 			"tasks": [],
 			"uri": {},
