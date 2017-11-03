@@ -19,10 +19,10 @@ module.exports = {
 		rules: [
 			{
 				test: /\.css$/,
-				use: ExtractTextWebpackPlugin.extract({
+				use: ['css-hot-loader'].concat(ExtractTextWebpackPlugin.extract({
 					fallback: 'style-loader',
 					use: 'css-loader'
-				})
+				}))
 			},
 			{
         test: /\.(png|svg|jpg|gif)$/,
