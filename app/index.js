@@ -1,5 +1,5 @@
 	import _ from 'lodash'
-	import './styles/foundation.min.css'
+	import './styles/_normalize.css'
 	import './styles/styles.css'
 	import m from 'mithril'
 	import Components from './components'
