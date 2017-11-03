@@ -4,28 +4,32 @@ import Data from './portfolio.model.js'
 var List = {
 	oninit: Data.loadJSON,
 	view: function(){
-		return m('ul.portfolio-list',[
-			Data.list.map(function(data){
-				return m('li.portfolio-list-item', [
-						m('a.portfolio-list-item-link', {href: '/portfolio/' + data.id, oncreate: m.route.link}, data.project_name),
-						m('br'),
-						m('.portfolio-list-item-end_date', data.end_date),
-						m('.portfolio-list-item-description', data.description)
-					]
-				)
-			})
-		])
+		return m('.portfolio-content',
+			m('ul.portfolio-list',[
+				Data.list.map(function(data){
+					return m('li.portfolio-list-item', 
+						m('.portfolio-list-item-container',
+							[
+								m('img.portfolio-item-thumbnail', { src: data.thumbnail.value, alt: data.thumbnail.description }),
+								m('a.portfolio-list-item-link', {href: '/portfolio/' + data.id, oncreate: m.route.link}, data.projectName),
+								m('.portfolio-list-item-endDate', data.endDate)
+							]
+						)
+					)
+				})
+			])
+		)
 	}
 }
 
 var Show = {
 	oninit: function(vnode){ Data.load(vnode.attrs.id) },
 	view: function(){
-		return m('.portfolio',[
+		return m('.portfolio-content',[
 			m('a.back_button', { href: '/portfolio', oncreate: m.route.link }, '<< BACK'),
-			m('.project_name', Data.current.project_name),
-			m('.start_date', Data.current.start_date),
-			m('.end_date', Data.current.end_date),
+			m('.projectName', Data.current.projectName),
+			m('.startDate', Data.current.startDate),
+			m('.endDate', Data.current.endDate),
 			m('.portfolio-tasks',[
 				m('ul.portfolio-tasks-list',
 					Data.current.tasks.map( function(task){
@@ -35,7 +39,6 @@ var Show = {
 			]),
 			m('.tasks', Data.current.tasks),
 			m('.uri', Data.current.uri),
-			m('img.portfolio-item-thumbnail', { src: Data.current.thumbnail.value, alt: Data.current.thumbnail.description }),
 			Data.current.imgs.map( function(img){
 				return m('img', { src: img.value, alt: img.description })
 			})
