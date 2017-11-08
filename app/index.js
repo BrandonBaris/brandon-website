@@ -1,5 +1,6 @@
 	import _ from 'lodash'
 	import './styles/_normalize.css'
+	import './styles/font-awesome-4.7.0/css/font-awesome.min.css'
 	import './styles/styles.css'
 	import m from 'mithril'
 	import Components from './components'
