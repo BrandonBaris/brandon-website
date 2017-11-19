@@ -1,5 +1,6 @@
 import m from 'mithril'
 import './layout.css'
+
 export default {
 	view: function(vnode){
 		// TODO: CLEANUP
@@ -8,7 +9,7 @@ export default {
 		// console.log(window.screen.height)
 		// console.log('asdf',gradientArr.length)
 		return m('main.layout', [
-			// m('header.main-header','Brandon Baris'),
+			m('header.main-header','Brandon Baris'),
 			m('section.main-section', [
 				m('nav.menu',[
 					m('ul.menu-list', [
@@ -64,22 +65,20 @@ export default {
 							gradientArr.map( function(val,idx){
 								let opacity = ( _opacity - idx * 24 ) / 1000
 								console.log(opacity)
-								return m('a', { href: '/', oncreate: m.route.link }, 
-									m('li.menu-list-item', [
-											m('.menu-icon._iconcolor', { style: 'opacity:' + opacity },m('i.fa.fa-fw.fa-times')),
-											m('.menu-text', '')
-										]
-									)
+								return m('li.menu-list-item', [
+										m('.menu-icon._iconcolor', { style: 'opacity:' + opacity },m('i.fa.fa-fw.fa-times')),
+										m('.menu-text', '')
+									]
 								)
-							})
+							}),
+							// m('li.menu-list-item', new Date().getFullYear())
 						]
 					)
 				]),
 				m('article.content', vnode.children)
-		]),
-			m('footer.main-footer',
-				m('a', { href: 'mailto:brandonbaris@gmail.com?subject=HI BRANDON'}, new Date().getFullYear())
-			)
+			]),
+			m('footer.main-footer', new Date().getFullYear())
+			
 		])
 	}
 }
