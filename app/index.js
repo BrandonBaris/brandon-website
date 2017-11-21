@@ -5,14 +5,6 @@
 	import m from 'mithril'
 	import Components from './components'
 
-	// TODO: REMOVE AFTER
-	if ( process.env.NODE_ENV === 'production' ){
-		console.log("PRODUCTION")
-		window.alert("YOU ARE IN PRODUCTION!")
-	} else {
-		console.log("DEV")
-	}
-
 	m.route(document.body, "/", {
 		"/": {
 			render: function(){
@@ -35,9 +27,3 @@
 			}
 		}
 	})
-
-  // if (module.hot) {
-  // 	module.hot.accept('Example', function(){
-  // 		console.log("TEST")
-  // 	})
-  // }
