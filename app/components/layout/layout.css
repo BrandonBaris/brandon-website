@@ -13,7 +13,6 @@ a>li>.menu-icon:hover {
 }
 
 main.layout {
-	/*background-color: #fff;*/
 	display: flex;
 	flex-flow: row wrap;
 	margin: auto;
@@ -29,7 +28,9 @@ header.main-header {
 	font-size: 1.2rem;
 	margin-bottom: 2px;
 	opacity: 0.8;
-	padding: 3px;
+	padding: 0.5rem;
+	text-align: left;
+	min-width: 500px;
 }
 
 

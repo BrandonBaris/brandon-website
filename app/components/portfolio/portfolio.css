@@ -1,10 +1,9 @@
 a {
-	color: #888;
+	color: #666;
 	text-decoration: none;
 }
 
 .portfolio-list-content {
-	/*background-color: #fff;*/
 	display: flex;
 	flex-flow: column wrap;
 	margin: auto;
@@ -87,7 +86,6 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover
 	color: #f83;
 	/*background-color: #7285a5;*/
 	/*background-color: #dd4b39;*/
-	/*background-color: #fff;*/
 	/*border: 1px solid #111;*/
 	border-radius: 4px;
 	max-width: 30px;
@@ -121,7 +119,6 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover
 
 /* SHOW VIEW STYLES */
 .portfolio-show-content {
-	/*background-color: #fff;*/
 	display: flex;
 	flex-flow: column wrap;
 	/*margin: auto;*/
@@ -208,9 +205,9 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover
 
 .portfolio-tags-list-item {
 	background-color: #fff;
-	border: 1px solid #6cf;
+	border: 1px solid #006;
 	border-radius: 5px;
-	border-right: 3px solid #6cf;
+	border-right: 3px solid #006;
 	opacity: 0.8;
 	flex: 1;
 	margin: 0.1rem;
@@ -219,8 +216,7 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover
 }
 
 .portfolio-item-tag-icon {
-	color: #6cf;
-	/*background-color: #fff;*/
+	color: #006;
 	/*background-color: #99ddcc;*/
 	/*background-color: #dd4b39;*/
 	/*background-color: #ff8106;*/
@@ -245,7 +241,6 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover
 .portfolio-item-tag-label  {
 	/*border-radius: 4px;*/
 	/*background-color: #9dc;*/
-	/*background-color: #fff;*/
 	border-bottom-right-radius: 4px;
 	border-top-right-radius: 4px;
 	font-size: 1rem;
@@ -264,11 +259,14 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover
 .description {
 	margin: 2px;
 	background-color: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid #ddd;
 	border-radius: 4px;
-	border-right: 3px solid #ccc;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	/*border-right: 3px solid #ccc;*/
+	border-right: 0;
 	margin-bottom: 0;
-	/*min-height: 268px;*/
+	/*opacity: 0.6;*/
 	padding: 4px;
 }
 

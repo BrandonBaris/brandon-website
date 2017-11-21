@@ -1,23 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 body {
-	/*background-image: url('../assets/images/lightpaperfibers_@2x.png');*/
-	background-color: #eee;
+	background-color: #fff;
+	background-image: url('../assets/images/topography.png');
 	font: normal 1em Lato;
 	margin: 0;
 	padding: 0;
-}
-div, nav, footer, header {
-	background-color: #ddd;
-	/*border: 1px solid #ddd;*/
 }
 
 ul
 {
 	list-style-type: none;
+	margin: 0;
 	overflow: hidden;
 	padding: 0;
-	margin: 0;
 }
 
 li {

@@ -6,8 +6,6 @@ export default {
 		// TODO: CLEANUP
 		let gradientArr = new Array(48).fill(0)
 		let _opacity = 1000
-		// console.log(window.screen.height)
-		// console.log('asdf',gradientArr.length)
 		return m('main.layout', [
 			m('header.main-header','Brandon Baris'),
 			m('section.main-section', [
@@ -27,7 +25,9 @@ export default {
 									]
 								)
 							),
-							m('a', { href:'/cv', oncreate: m.route.link }, 
+							// TEMPORARY RAW FILE LINK
+							m('a', { href:'https://s3-us-west-2.amazonaws.com/brandonbaris.com/bobresume2017.pdf' }, 
+							// m('a', { href:'/cv', oncreate: m.route.link },
 								m('li.menu-list-item', [
 										m('.menu-icon', m('i.fa.fa-fw.fa-user-circle-o')),
 										m('.menu-text', 'CV')
@@ -64,13 +64,13 @@ export default {
 							// ),
 							gradientArr.map( function(val,idx){
 								let opacity = ( _opacity - idx * 24 ) / 1000
-								console.log(opacity)
+								// console.log(opacity)
 								return m('li.menu-list-item', [
 										m('.menu-icon._iconcolor', { style: 'opacity:' + opacity },m('i.fa.fa-fw.fa-times')),
 										m('.menu-text', '')
 									]
 								)
-							}),
+							})
 							// m('li.menu-list-item', new Date().getFullYear())
 						]
 					)

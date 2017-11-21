@@ -2,7 +2,7 @@ import m from 'mithril'
 import Data from './portfolio.model.js'
 import './portfolio.css'
 
-var List = {
+let List = {
 	oninit: Data.loadJSON,
 	view: function(){
 		let fillArr = new Array(8).fill(0)
@@ -29,7 +29,7 @@ var List = {
 				}),
 				fillArr.map( function(val,idx){
 					let opacity = ( _opacity - idx * 140 ) / 1000
-					console.log(opacity)
+					// console.log(opacity)
 					return m('li.portfolio-list-item',{ style: 'opacity:' + opacity }, 
 					[
 						// m('img.portfolio-item-thumbnail', { src: data.thumbnail.value, alt: data.thumbnail.description }),
@@ -43,10 +43,9 @@ var List = {
 	}
 }
 
-var Show = {
+let Show = {
 	oninit: function(vnode){ Data.load(vnode.attrs.id) },
 	view: function(){
-		console.log('asdf',Data.current.tags)
 		return m('.portfolio-show-content', [
 			m('a', { href: '/portfolio', oncreate: m.route.link }, 
 				m('.item-box', [
