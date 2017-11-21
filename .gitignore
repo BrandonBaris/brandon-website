@@ -3,3 +3,4 @@ dist
 node_modules
 app/components/portfolio/portfolio_data.json
 app/components/cv/cv_data.json
+app/assets/bobresume2017.pdf
