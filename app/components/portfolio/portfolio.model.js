@@ -11,7 +11,7 @@ var Data = {
 		var _data = portfolio_data.data.find(function(data){
 			return data.id == id
 		})
-		console.log('data',_data);
+		// console.log('data',_data);
 		return Data.current = ( _data !== undefined ) ? _data : Data.current = { firstName: 'HIHOI', lastName: 'AIOFOA', id: 0 }
 	}
 }

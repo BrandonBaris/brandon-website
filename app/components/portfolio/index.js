@@ -8,12 +8,13 @@ let List = {
 		let fillArr = new Array(8).fill(0)
 		let _opacity = 1000
 		return m('.portfolio-list-content', [
-			// m('.portfolio-header', [
-			// 		m('.portfolio-icon', m('i.fa.fa-fw.fa-circle')),
-			// 		m('.portfolio-list-item-project-name','Portfolio')
-			// 	]
-			// ),
 			m('ul.portfolio-list',[
+				m('li.portfolio-header', 
+					[
+						m('.portfolio-header-text', 'PROJECT HISTORY' ),
+						m('.portfolio-icon', m('i.fa.fa-fw.fa-circle-o')),
+					]
+				),
 				Data.list.map(function(data){
 					return m('a.portfolio-list-item-link', { href: '/portfolio/' + data.id, oncreate: m.route.link },
 							m('li.portfolio-list-item', 
@@ -53,9 +54,6 @@ let Show = {
 						m('.portfolio-item-label.project-name', 'BACK')
 					]
 				)
-				// m('.back-button', 
-				// 	m('i.fa.fa-fw.fa-angle-double-left')
-				// )
 			),
 			m('.item-box', [
 					m('.portfolio-show-icon', m('i.fa.fa-fw.fa-file-text')),
@@ -102,7 +100,14 @@ let Show = {
 			]):null,
 			(Data.current.imgs.length > 0)?Data.current.imgs.map( function(img){
 				return m('img.item-box', { src: img.value, alt: img.description })
-			}):null
+			}):null,
+			m('a', { href: '/portfolio', oncreate: m.route.link }, 
+				m('.item-box', [
+						m('.portfolio-show-icon', m('i.fa.fa-fw.fa-angle-double-left')),
+						m('.portfolio-item-label.project-name', 'BACK')
+					]
+				)
+			),
 		])
 	}
 }
