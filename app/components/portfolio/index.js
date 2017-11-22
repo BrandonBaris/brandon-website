@@ -1,6 +1,7 @@
 import m from 'mithril'
 import Data from './portfolio.model.js'
 import './portfolio.css'
+import Img from '../../assets/images'
 
 let List = {
 	oninit: Data.loadJSON,
@@ -12,13 +13,12 @@ let List = {
 				m('li.portfolio-header', 
 					[
 						m('.portfolio-header-text', 'PROJECT HISTORY' ),
-						m('.portfolio-icon', m('i.fa.fa-fw.fa-circle-o')),
+						m('.portfolio-icon', m('i.fa.fa-fw.fa-file-code-o')),
 					]
 				),
 				Data.list.map(function(data){
 					return m('a.portfolio-list-item-link', { href: '/portfolio/' + data.id, oncreate: m.route.link },
 							m('li.portfolio-list-item', 
-							// m('.portfolio-list-item-container',
 							[
 								// m('img.portfolio-item-thumbnail', { src: data.thumbnail.value, alt: data.thumbnail.description }),
 								m('.portfolio-list-item-project-name', data.projectName ),
@@ -60,7 +60,7 @@ let Show = {
 					m('.portfolio-item-label.project-name', Data.current.projectName)
 				]
 			),
-			m('a',{ href: Data.current.url },
+			m('a',{ href: Data.current.url, target: '_blank' },
 				m('.item-box', [
 						m('.portfolio-show-icon', m('i.fa.fa-fw.fa-external-link')),
 						// m('.portfolio-item-label', 'URL:'),
@@ -80,6 +80,16 @@ let Show = {
 					m('.portfolio-item-label.start-date', Data.current.startDate)
 				]
 			),
+			(Data.current.tags.length > 0)?m('.portfolio-tags',[
+				m('ul.portfolio-tags-list',
+					Data.current.tags.map( function(tag){
+						return m('li.portfolio-tags-list-item', [
+							// m('i.fa.fa-fw.fa-tag.portfolio-item-tag-icon'),
+							m('.portfolio-item-tag-label',tag)
+						])
+					})
+				)
+			]):null,
 			m('.description', Data.current.description),
 			// (Data.current.tasks.length > 0)?m('.portfolio-tasks.item-box',[
 			// 	m('ul.portfolio-tasks-list',
@@ -88,19 +98,11 @@ let Show = {
 			// 		})
 			// 	)
 			// ]):null,
-			(Data.current.tags.length > 0)?m('.portfolio-tags',[
-				m('ul.portfolio-tags-list',
-					Data.current.tags.map( function(tag){
-						return m('li.portfolio-tags-list-item', [
-							m('i.fa.fa-fw.fa-tag.portfolio-item-tag-icon'),
-							m('.portfolio-item-tag-label',tag)
-						])
-					})
-				)
-			]):null,
-			(Data.current.imgs.length > 0)?Data.current.imgs.map( function(img){
-				return m('img.item-box', { src: img.value, alt: img.description })
-			}):null,
+			m('.portfolio-img-container',
+				(Data.current.imgs.length > 0)?Data.current.imgs.map( function(img){
+					return m('img.portfolio-img.item-box', { src: Img[img.value], alt: img.description })
+				}):null,
+			),
 			m('a', { href: '/portfolio', oncreate: m.route.link }, 
 				m('.item-box', [
 						m('.portfolio-show-icon', m('i.fa.fa-fw.fa-angle-double-left')),
