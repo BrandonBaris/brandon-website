@@ -37,32 +37,48 @@ export default {
 							),
 							m('a', { href: 'https://github.com/brandonbaris', target: '_blank'}, 
 								m('li.menu-list-item', [
-										m('.menu-icon', m('i.fa.fa-fw.fa-github-square')),
+										m('.menu-icon', m('i.fa.fa-fw.fa-github')),
 										m('.menu-text', 'GitHub')
 									]
 								)
 							),
 							m('a', { href: 'https://www.linkedin.com/in/brandonbaris/', target: '_blank' }, 
 								m('li.menu-list-item', [
-										m('.menu-icon', m('i.fa.fa-fw.fa-linkedin-square')),
+										m('.menu-icon', m('i.fa.fa-fw.fa-linkedin')),
 										m('.menu-text', 'LinkedIn')
 									]
 								)
 							),
 							m('a', { href: 'mailto:brandonbaris@gmail.com?subject=HI BRANDON'}, 
 								m('li.menu-list-item', [
-										m('.menu-icon', m('i.fa.fa-fw.fa-envelope')),
+										m('.menu-icon', m('i.fa.fa-fw.fa-envelope-o')),
 										m('.menu-text', 'Email')
 									]
 								)
 							),
+							/* PLACE HOLDER ICONS */
 							// m('a', { href: '/', oncreate: m.route.link }, 
 							// 	m('li.menu-list-item', [
 							// 			m('.menu-icon', m('i.fa.fa-fw.fa-times')),
-							// 			m('.menu-text', '') // PLACEHOLDER
+							// 			m('.menu-text', '')
 							// 		]
 							// 	)
 							// ),
+							m('li.menu-list-item',
+								m('.menu-icon.invalid',
+									m('i.fa.fa-fw.fa-twitter')
+								)
+							),
+							m('li.menu-list-item',
+								m('.menu-icon.invalid',
+									m('i.fa.fa-fw.fa-twitch')
+								)
+							),
+							m('li.menu-list-item',
+								m('.menu-icon.invalid',
+									m('i.fa.fa-fw.fa-facebook-official')
+								)
+							),
 							gradientArr.map( function(val,idx){
 								let opacity = ( _opacity - idx * 24 ) / 1000
 								// console.log(opacity)
