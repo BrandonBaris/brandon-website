@@ -54,7 +54,7 @@ li.portfolio-list-item {
 	font-size: 0.8rem;
 	margin: 0.1rem;
 	max-height: 30px;
-	min-width: 300px;
+	min-width: 200px;
 	opacity: 0.9;
 	padding: 3px;
 }
@@ -219,15 +219,17 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover {
 .portfolio-img-container {
 	align-content: center;
 	display: inline;
-	height: auto;
 	justify-content: center;
 	text-align: center;
 }
 
 .portfolio-img {
 	border: 1px solid #666;
+	min-width: 100px;
+	max-width: 90%;
+	height: auto;
 	border-radius: 4px;
-	margin: 0.4rem 1rem;
+	margin: 0.2rem;
 }
 
 .portfolio-img:hover {
