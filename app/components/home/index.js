@@ -11,8 +11,9 @@ export default {
 					m('.home-text','WELCOME')
 				]),
 				m('.home-body', [
-						m('.bubble', m.trust('<p>We always start with <i>"Hello World!"</i>, but the world never says hello back.</p>')),
-						m('img.portrait', { src: Img['splash'] })
+						m('.bubble.bubble-point-bottom', m.trust('<p>花より団子</p>')),
+						m('img.splash', { src: Img['splash'] }),
+						m('.bubble.bubble-point-top', m.trust('<p>Meow...</p>'))
 					]
 				)
 			])
