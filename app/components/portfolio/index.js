@@ -100,7 +100,7 @@ let Show = {
 			// ]):null,
 			m('.portfolio-img-container',
 				(Data.current.imgs.length > 0)?Data.current.imgs.map( function(img){
-					return m('img.portfolio-img.item-box', { src: Img[img.value], alt: img.description })
+					return m('img.portfolio-img', { src: Img[img.value], alt: img.description })
 				}):null,
 			),
 			m('a', { href: '/portfolio', oncreate: m.route.link }, 

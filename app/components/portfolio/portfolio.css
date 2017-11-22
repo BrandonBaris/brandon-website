@@ -213,9 +213,10 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover {
 
 .portfolio-img-container {
 	align-content: center;
-	display: inline-grid;
+	display: inline;
 	height: auto;
 	justify-content: center;
+	text-align: center;
 }
 
 .portfolio-img {
