@@ -11,10 +11,11 @@ import p_hello_01 from './p_hello_01.png'
 import p_twc_01 from './p_twc_01.png'
 import p_uhero_01 from './p_uhero_01.png'
 import p_uhero_02 from './p_uhero_02.png'
-import me from './me.png'
+import portrait from './portrait.png'
+import splash from './splash.jpg'
 
 export default {
-	me,
+	portrait,
 	p_air_01,
 	p_air_02,
 	p_gaptcha_01,
@@ -28,4 +29,5 @@ export default {
 	p_twc_01,
 	p_uhero_01,
 	p_uhero_02,
+	splash
 }
