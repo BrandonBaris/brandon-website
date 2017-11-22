@@ -154,6 +154,7 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover {
 	flex: 1;
 	margin: 0.1rem;
 	max-height: 50px;
+	overflow: hidden;
 	padding: 0.4rem;
 }
 
@@ -220,6 +221,7 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover {
 	align-content: center;
 	display: inline;
 	justify-content: center;
+	margin: auto;
 	text-align: center;
 }
 
