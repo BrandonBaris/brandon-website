@@ -7,7 +7,8 @@ export default {
 		let gradientArr = new Array(48).fill(0)
 		let _opacity = 1000
 		return m('main.layout', [
-			m('header.main-header','Brandon Baris'),
+			m('.header-placeholder'),
+			m('header.main-header', 'Brandon Baris'),
 			m('section.main-section', [
 				m('nav.menu',[
 					m('ul.menu-list', [
@@ -26,7 +27,7 @@ export default {
 								)
 							),
 							// TEMPORARY RAW FILE LINK
-							m('a', { href:'https://s3-us-west-2.amazonaws.com/brandonbaris.com/bobresume2017.pdf' }, 
+							m('a', { href:'https://s3-us-west-2.amazonaws.com/brandonbaris.com/bobresume2017.pdf', target: '_blank' }, 
 							// m('a', { href:'/cv', oncreate: m.route.link },
 								m('li.menu-list-item', [
 										m('.menu-icon', m('i.fa.fa-fw.fa-user-circle-o')),
@@ -34,14 +35,14 @@ export default {
 									]
 							  )
 							),
-							m('a', { href: 'https://github.com/brandonbaris'}, 
+							m('a', { href: 'https://github.com/brandonbaris', target: '_blank'}, 
 								m('li.menu-list-item', [
 										m('.menu-icon', m('i.fa.fa-fw.fa-github-square')),
 										m('.menu-text', 'GitHub')
 									]
 								)
 							),
-							m('a', { href: 'https://www.linkedin.com/in/brandonbaris/' }, 
+							m('a', { href: 'https://www.linkedin.com/in/brandonbaris/', target: '_blank' }, 
 								m('li.menu-list-item', [
 										m('.menu-icon', m('i.fa.fa-fw.fa-linkedin-square')),
 										m('.menu-text', 'LinkedIn')
@@ -66,7 +67,7 @@ export default {
 								let opacity = ( _opacity - idx * 24 ) / 1000
 								// console.log(opacity)
 								return m('li.menu-list-item', [
-										m('.menu-icon._iconcolor', { style: 'opacity:' + opacity },m('i.fa.fa-fw.fa-times')),
+										m('.menu-icon._placeholder-icon', { style: 'opacity:' + opacity },m('i.fa.fa-fw.fa-times')),
 										m('.menu-text', '')
 									]
 								)

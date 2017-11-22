@@ -1,15 +1,9 @@
-/* TODO: GLOBAL?*/
-a {
-	color: #c9302c;
-	text-decoration: none;
-}
-
 a>li>.menu-icon:hover {
 	background-color: #f66;
 	border-right: 3px solid #fbb;
+	box-shadow: 1px 1px 3px #f66;
 	color: #fff;
 	opacity: 0.8;
-	box-shadow: 1px 1px 3px #f66;
 }
 
 main.layout {
@@ -20,19 +14,33 @@ main.layout {
 }
 
 header.main-header {
-	border-bottom: 3px solid #666;
-	background-image: url('../../assets/images/dark_embroidery.png');
 	background-color: #222;
+	background-image: url('../../assets/images/dark_embroidery.png');
+	border-bottom: 3px solid #666;
 	color: #fff;
 	flex: 2;
 	font-size: 1.2rem;
+	/*left: 0;*/
 	margin-bottom: 2px;
+	/*min-width: 500px;*/
 	opacity: 0.8;
 	padding: 0.5rem;
+	position: fixed;
 	text-align: left;
-	min-width: 500px;
+	top: 0;
+	width: 100%;
+	z-index: 1;
 }
 
+.header-placeholder {
+	height: 45px;
+	width: 100%;
+	z-index: 0;
+}
+
+.header-link {
+	color: #fff;
+}
 
 section.main-section {
 	display: flex;
@@ -61,7 +69,6 @@ li.menu-list-item
 {
 	border-radius: 4px;
 	display: flex;
-	/*margin: 2px;*/
 	margin: 0.1rem;
 	max-width: 50px;
 	max-height: 50px;
@@ -71,15 +78,8 @@ li.menu-list-item
 {
 	align-items: center;
 	background-color: #fff;
-	/*background-color: #3c9;*/
-	/*background-color: #f60;*/
-	/*background-color: #f03;*/
-	/*background-color: #dd4b39;*/
 	border: 1px solid #ccc;
-	/*border: 1px solid #4aa;*/
-	/*border: 1px solid #dd4b39;*/
 	border-right: 3px solid #aaa;
-	/*border-bottom: 3px solid #aaa;*/
 	border-radius: 4px;
 	color: #6d9;
 	flex: 1;
@@ -96,7 +96,7 @@ li.menu-list-item
 	box-shadow: 1px 1px 3px #3c9;
 }
 
-._iconcolor {
+._placeholder-icon {
 	color: #fff;
 	/*color: #ff8106;*/
 	/*color: #f60;*/
@@ -141,7 +141,7 @@ article.content {
 	padding-left: 2px;
 	padding-right: 2px;
 	flex: 1;
-	width: auto;
+	/*width: auto;*/
 }
 
 footer.main-footer {
