@@ -90,7 +90,7 @@ let Show = {
 					})
 				)
 			]):null,
-			m('.description', Data.current.description),
+			m('.description', m.trust('<p>' + Data.current.description + '</p>')),
 			// (Data.current.tasks.length > 0)?m('.portfolio-tasks.item-box',[
 			// 	m('ul.portfolio-tasks-list',
 			// 		Data.current.tasks.map( function(task){

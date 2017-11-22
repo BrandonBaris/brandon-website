@@ -148,13 +148,18 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover {
 	box-shadow: 1px 1px 3px #f83;
 }
 
-.portfolio-item-label, .project-name {
+.portfolio-item-label {
 	border-bottom: 1px solid #ddd;
 	background-color: rgba(221,221,221,0.3);
 	flex: 1;
 	margin: 0.1rem;
 	max-height: 50px;
 	padding: 0.4rem;
+}
+
+.portfolio-item-label:hover
+{
+	box-shadow: 1px 1px 3px #eee;
 }
 
 .portfolio-tags-list {
@@ -203,7 +208,7 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover {
 	border-bottom-right-radius: 0;
 	margin: 2px;
 	margin-bottom: 0;
-	padding: 4px;
+	padding: 3px 1rem;
 }
 
 .description:hover {
@@ -223,4 +228,8 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover {
 	border: 1px solid #666;
 	border-radius: 4px;
 	margin: 0.4rem 1rem;
+}
+
+.portfolio-img:hover {
+	box-shadow: 1px 1px 3px #aaa;
 }
