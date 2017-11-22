@@ -98,8 +98,6 @@ li.menu-list-item
 
 ._placeholder-icon {
 	color: #fff;
-	/*color: #ff8106;*/
-	/*color: #f60;*/
 }
 
 ._redbg {
@@ -131,9 +129,6 @@ li.menu-list-item
 }
 
 article.content {
-	/*background-image: url('../../assets/images/topography.png');*/
-	/*background-color: rgba(221,221,221,0.5);*/
-	/*border-left: 1px solid #ccc;*/
 	border-right: 1px solid #ccc;
 	border-radius: 4px;
 	margin-right: 1px;
@@ -141,15 +136,21 @@ article.content {
 	padding-left: 2px;
 	padding-right: 2px;
 	flex: 1;
-	/*width: auto;*/
 }
 
 footer.main-footer {
-	/*border: 1px solid #ddd;*/
 	border-radius: 4px;
-	color: #aaa;
-	margin-right: 8px;
+	bottom: 0;
+	color: #666;
+	right: 0;
 	padding: 4px;
+	position: fixed;
 	text-align: right;
 	width: 100%;
+}
+
+.footer-placeholder {
+	height: 30px;
+	width: 100%;
+	z-index: 0;
 }

@@ -72,14 +72,13 @@ export default {
 									]
 								)
 							})
-							// m('li.menu-list-item', new Date().getFullYear())
 						]
 					)
 				]),
 				m('article.content', vnode.children)
 			]),
+			m('.footer-placeholder'),
 			m('footer.main-footer', new Date().getFullYear())
-			
 		])
 	}
 }
