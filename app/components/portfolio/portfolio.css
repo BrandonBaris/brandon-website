@@ -208,7 +208,8 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	margin: 2px;
-	margin-bottom: 0;
+	margin-bottom: 4px;
+	margin-right: 3px;
 	padding: 3px 1rem;
 }
 
@@ -218,17 +219,18 @@ a.portfolio-list-item-link>li.portfolio-list-item:hover {
 }
 
 .portfolio-img-container {
-	align-content: center;
+	background-color: #eee;
 	display: inline;
-	justify-content: center;
 	margin: auto;
+	margin-right: 3px;
+	margin-left: 3px;
+	padding: 4px;
 	text-align: center;
 }
 
 .portfolio-img {
 	border: 1px solid #666;
-	min-width: 100px;
-	max-width: 90%;
+	max-width: 100%;
 	height: auto;
 	border-radius: 4px;
 	margin: 0.2rem;
