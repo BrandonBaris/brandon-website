@@ -60,14 +60,14 @@ let Show = {
 					m('.portfolio-item-label.project-name', Data.current.projectName)
 				]
 			),
-			m('a',{ href: Data.current.url, target: '_blank' },
+			(Data.current.url) ? m('a',{ href: Data.current.url, target: '_blank' },
 				m('.item-box', [
 						m('.portfolio-show-icon', m('i.fa.fa-fw.fa-external-link')),
 						// m('.portfolio-item-label', 'URL:'),
 						m('.portfolio-item-label.url', Data.current.url)
 					]
 				)
-			),
+			):null,
 			m('.item-box', [
 					m('.portfolio-show-icon', m('i.fa.fa-fw.fa-calendar-check-o')),
 					// m('.portfolio-item-label', 'End Date:'),
@@ -80,7 +80,7 @@ let Show = {
 					m('.portfolio-item-label.start-date', Data.current.startDate)
 				]
 			),
-			(Data.current.tags.length > 0)?m('.portfolio-tags',[
+			(Data.current.tags.length > 0) ? m('.portfolio-tags',[
 				m('ul.portfolio-tags-list',
 					Data.current.tags.map( function(tag){
 						return m('li.portfolio-tags-list-item', [
