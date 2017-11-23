@@ -50,10 +50,22 @@ section.main-section {
 nav.menu {
 	flex: 1;
 	/*max-width: 5.64rem;*/
-	max-width: 8.31rem;
-	min-width: 2.77rem;
+	max-width: 8.4rem;
+	min-width: 2.8rem;
 	text-align: center;
 	width: 20%;
+}
+
+@media only screen and (max-width:362px){
+	nav.menu {
+		max-width: 2.8rem;
+	}
+}
+
+@media only screen and (max-width:405px) and (min-width: 362px){
+	nav.menu {
+		max-width: 5.6rem;
+	}
 }
 
 ul.menu-list {
