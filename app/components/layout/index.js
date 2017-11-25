@@ -6,6 +6,8 @@ export default {
 		// TODO: CLEANUP
 		let gradientArr = new Array(48).fill(0)
 		let _opacity = 1000
+		let cvUrl = 'https://s3-us-west-2.amazonaws.com/brandonbaris.com/bobresume2017.pdf'
+		
 		return m('main.layout', [
 			m('.header-placeholder'),
 			m('header.main-header', 'Brandon Baris'),
@@ -27,7 +29,7 @@ export default {
 								)
 							),
 							// TEMPORARY RAW FILE LINK
-							m('a', { href:'https://s3-us-west-2.amazonaws.com/brandonbaris.com/bobresume2017.pdf', target: '_blank' }, 
+							m('a', { href: cvUrl, target: '_blank' }, 
 							// m('a', { href:'/cv', oncreate: m.route.link },
 								m('li.menu-list-item', [
 										m('.menu-icon', m('i.fa.fa-fw.fa-user-circle-o')),
