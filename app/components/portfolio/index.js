@@ -22,7 +22,7 @@ let List = {
 							[
 								// m('img.portfolio-item-thumbnail', { src: data.thumbnail.value, alt: data.thumbnail.description }),
 								m('.portfolio-list-item-project-name', data.projectName ),
-								m('.portfolio-list-item-end-date', (data.endDate !== null)?new Date(data.endDate).getFullYear():'--' ),
+								m('.portfolio-list-item-end-date', (data.endDate !== null)?new Date(data.endDate).getFullYear():'' ),
 								m('.portfolio-icon', m('i.fa.fa-fw.fa-angle-double-right')),
 							]
 						)
@@ -68,12 +68,13 @@ let Show = {
 					]
 				)
 			):null,
+			(Data.current.endDate) ? 
 			m('.item-box', [
 					m('.portfolio-show-icon', m('i.fa.fa-fw.fa-calendar-check-o')),
 					// m('.portfolio-item-label', 'End Date:'),
-					m('.portfolio-item-label.end-date', (Data.current.endDate !== null)?Data.current.endDate:'--' )
+					m('.portfolio-item-label.end-date', Data.current.endDate )
 				]
-			),
+			):null,
 			m('.item-box', [
 					m('.portfolio-show-icon', m('i.fa.fa-fw.fa-calendar-plus-o')),
 					// m('.portfolio-item-label', 'Start Date:'),
