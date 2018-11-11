@@ -5,6 +5,7 @@ const common = require('./webpack.common.js');
 const BrowserSyncWebpackPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = merge( common, {
+	mode: 'development',
 	devtool: 'inline-source-map',
 	devServer: {
 		hot: true,

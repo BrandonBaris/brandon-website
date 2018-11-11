@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 	entry: {
@@ -15,14 +16,31 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist')
 	},
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				commons: {
+					name: 'vendor',
+					chunks: 'initial',
+					minChunks: 2
+				}
+			},
+			chunks: 'all'
+		}
+	},
 	module: {
 		rules: [
 			{
 				test: /\.css$/,
-				use: ['css-hot-loader'].concat(ExtractTextWebpackPlugin.extract({
-					fallback: 'style-loader',
-					use: 'css-loader'
-				}))
+				use: [
+					{
+	          loader: MiniCssExtractPlugin.loader,
+	          options: {
+		          publicPath: '../'
+	          }
+	        },
+          'css-loader'
+        ]
 			},
 			{
         test: /\.(png|svg|jpg|gif)$/,
@@ -38,20 +56,17 @@ module.exports = {
       },
       {
       	test: /\.js$/, exclude: /node_modules/,
-      	loader: "babel-loader"
+      	loader: "babel-loader",
+      	options: {
+          presets: ['@babel/preset-env']
+        }
     	}
 		]
 	},
 	plugins: [
 		new CleanWebpackPlugin(['dist']),
 		new webpack.HashedModuleIdsPlugin(),
-		new webpack.optimize.CommonsChunkPlugin({
-			name: 'vendor'
-		}),
-		new webpack.optimize.CommonsChunkPlugin({
-			name: 'common'
-		}),
-		new ExtractTextWebpackPlugin('styles.css'),
+		new MiniCssExtractPlugin(),
 		new HtmlWebpackPlugin({
 			inject: false,
 			template: require('html-webpack-template'),
